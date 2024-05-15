@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="./index_files/styles.css" type="text/css">
+<body class="dark sans-serif loaded" style="--font-size: 26px; --content-width: 60em;">
+<div class="container" style="--line-height: 1.8em;" dir="ltr">
+<title> Steven's Side Projects </title>
+
+<div class="menu">
+    <a href="./">Home</a>
+    <a href="./CloudResume">Cloud Resume Challenge</a>
+    <a href="./noodles">Noodles!</a>
+    <a href="https://www.linkedin.com/in/steven-notridge-339891192/">LinkedIn</a>
+    <a href="https://github.com/Steven-Notridge">GitHub</a>
+    <a href="mailto:steven.notridge@live.com">Contact</a>
+</div> 
+
+<br>
+<br>
+<hr>
+
+<h1> Steven Notridge </h1>
+
+<hr>
+
+<h2> PowerShell </h2>
+<p>
+    Let me just start, by admitting that PowerShell is technically my first love, at least for scripting... It all started with a simple mistake that Engineers were making, when creating new user accounts. I just sat there for a moment and thought to myself, you know... This is technically the 'future' right? Surely this can be automated! I researched it, tested it, and before I knew it, the client approved it and it became the main method of user creations and no further issues happened again!
+</p>
+
+<p> So what have I done with PowerShell? </p>
+
+<ul>
+    <li>New User Automation.</li>
+    <li>Network Tool - Status Checker</li>
+    <li>Administration Reports - Password Expiry, Last Password Reset and so on.</li>
+    <li>Security Based Mailbox Permissions</li>
+    <li>Random Character Generator - Useless, but good to learn Arrays!</li>
+</ul> 
+
+<p> For what it's worth, you should know they come with Email reports! Especially the Network tool! </p>
+
+<hr>
+
+<h2> Python </h2>
+
+<p>
+    Hmm. Where to start? The easiest language to learn? Are the rumours true? I'd say so. I've found some languages like JavaScript a bit annoying to figure out, but Python just sits well. Whilst I'm not as proficient with it as PowerShell, I'm definitely comfortable reading it all. The main question I found myself asking however, how do I learn this though? Sure, people use Python for all sorts of things, and I even saw someone drawing art with it. Even though I tried to replicate that, I failed. I found that this was mostly because of the way libraries are used and referenced. It's kind of strange using an outdated or redundant library and trying to use it in code. PowerShell doesn't really have modules that expire, or stop working because of a new version. So this is something I need to wrap my head around, albeit it's not easy when nobody you know enjoys this stuff!
+</p>
+
+<p> Talking too much? A few things I've done below. </p>
+
+<ul>
+    <li>Automated Light Switch - With a Raspberry Pi3 (Motion sensing! Cool!)</li>
+    <li>Network Tool - Rewritten from PowerShell to Python.</li>
+    <li>Random Character Generator - Useless, but was fun to recode!</li>
+    <li>Text-To-Speech GMail reader. Why read when it can read it for you?</li>
+    <li>Noodles Webapp (You can find out more on the page above!</li>
+</ul>
+
+<p> Some more will be done with AWS, and this website in particular soon. Though these particular projects aren't really related to DevOps or even IT, I realise you can't truly understand something unless you have a goal in mind. If these projects weren't fun to do, I likely wouldn't have learnt anything and sat there watching tutorials on YouTube. </p>
+
+<hr>
+
+<h2> Linux </h2>
+
+<p>Debian or else. That is all. Jokes aside, it's my daily driver. Once I got down all of the strange issues at the start, I grew to love this distro. I originally tried Manjaro but the Networking just didn't work! So I gave up and tried Debian, and it just worked... Kinda. After I uninstalled xserver-xorg-video-intel and installed firmware-misc-nonfree, it was like the icing on the cake. Perfection. Buttery smooth animations at last. So I forced myself to use this as much as possible, how else would you learn? What did I do next, you ask? Well, I for some reason chose violence. Pulled out an old desktop, installed Debian ServerOS with no GUI, and decided, "Hey, why not see what KVM is like?" Ahh... It took a few days but I managed to recreate my workplaces Windows infrastructure with it. It didn't run very well, god no. But it worked. Every tutorial or help article out there was insisting on using the GUI, but I didn't want that. It took more time finding the right commands than actually doing anything else. I already know Windows well enough. But the best part? I ran this command, <code>route add default gw 192.168.0.78</code> and yep, it nuked my external access and left me dumbfounded for hours. You know something's gone terribly wrong when you can't resolve <code>ftp.uk.debian.org</code>! 
+</p>
+
+<p> What have I used Linux with/for? </p>
+
+<ul>
+    <li>Raspberry Pi</li>
+    <li>AWS - This site itself was using a headless free tier EC2 Instance, with Apache. Since then it's been adapted for the Cloud Resume Challenge, to use a S3 Bucket with CloudFront Distribution.</li>
+    <li>Debian, my daily driver.</li>
+    <li>Linux Server, currently hosting Splunk, MS-SQL and a PostgreSQL DB, but both aren't in use yet.</li>
+    <li>KVM</li>
+</ul>
+
+<p> I'm going to add a couple details about KVM, in case someone needs it. But the below is the config I used for my Windows Servers, and this is what I saved for the initial one. You need to save this as a .sh and then run it from your KVM server. It may also be less pain if you make another script for startup that runs <code>virsh net-start default</code> to prevent <code>error: Cannot get interface MTU on 'virbr0': No such device</code>.</p>
+
+<code> virt-install \
+    --name Server2019 \
+    --description "Windows Server 2019 Template" \
+    --os-type=windows \
+    --memory 8192 \
+    --vcpus=4 \
+    --cdrom /home/Steven/Iso/WindowsServer2022.iso \
+    --disk path=/var/lib/libvirt/images/windows2019.qcow2,bus=virtio,size=30 \
+    --disk /home/Steven/Iso/virtio-win.iso,device=cdrom,bus=ide \
+    --graphics vnc,listen=0.0.0.0 \
+    --noautoconsole \
+    --network bridge=virbr0,model=virtio
+</code>
+
+<p>You will need to download the virtio iso, and then load the drivers under the amd64 folder during the installation. After you've booted to Windows, you then need to go into Device Manager and then configure it further.</p>
+
+<hr>
+
+<p>Soon I'll add more about Kubernetes and Docker once I get there, I have been going through CKA for Kubernetes and a Docker Udemy course to teach me about that.</p>

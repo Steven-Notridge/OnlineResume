@@ -1,0 +1,154 @@
+:root {
+    --body-padding: 64px;
+    --font-size: 18;
+    --content-width: 22em;
+    --line-height: 1.6em;
+}
+
+/* Style the header with some padding */
+.header {
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Float the link section to the left */
+.header-left {
+  float: left;
+}
+
+/* Below is mostly just your typical formatting through trial and error. */
+h1 {
+    transition: 1.5s;
+    text-align: center;
+}
+
+h3 {
+    font-size: 32px;
+    transition: 2.4s;
+    margin: 0px;
+    padding: 0px;
+    height: 1em;
+}
+
+h4 {
+    font-size: 24px;
+    font-style: italic;
+    transition: 2.4s;
+    text-align: right;
+    margin: -2px;
+    padding: -2px;
+    height: 1em;
+}
+
+p {
+    transition: 2.4s;
+}
+
+body {
+    margin: 0;
+    padding: 64px;
+    background-color: rgb(28, 27, 34);
+    color: #eee;
+    font-family: Helvetica;
+}
+
+code {
+  color:rgb(253, 255, 139);
+  font-size: 24px;
+}
+
+div.menu {
+  overflow: auto;
+  white-space: nowrap;
+  float: left;
+  padding: 20px 10px;
+}
+
+div.menu a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+div.menu a:hover {
+  background-color: #777;
+}
+
+/* The container keeps everything nice and formatted. As the entire page is inside this container. */
+.container {
+    margin: 0 auto;
+    font-size: var(--font-size);
+    max-width: var(--content-width);
+    line-height: var(--line-height);
+}
+
+/* The below is just a fancy way to have my profile picture fade in. */
+.fade-in {
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    -moz-animation: fadeIn ease 10s;
+    -o-animation: fadeIn ease 10s;
+    -ms-animation: fadeIn ease 10s;
+}
+
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}

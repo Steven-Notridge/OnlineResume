@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./index_files/styles.css" type="text/css">
+<body class="dark sans-serif loaded" style="--font-size: 26px; --content-width: 60em;">
+<div class="container" style="--line-height: 1.8em;" dir="ltr">
+<title>Steven Notridge's Cloud Resume!</title> 
+
+<div class="menu">
+    <a href="./">Home</a>
+    <a href="./SideProjects">Side Projects</a>
+    <a href="./noodles">Noodles!</a>
+    <a href="https://www.linkedin.com/in/steven-notridge-339891192/">LinkedIn</a>
+    <a href="https://github.com/Steven-Notridge">GitHub</a>
+    <a href="mailto:steven.notridge@live.com">Contact</a>
+</div> 
+<br>
+<br>
+<hr>
+
+<h1> Steven Notridge </h1>
+
+<hr>
+<h2> Cloud Resume Challenge </h2>
+<p>The purpose of the Challenge is to demonstrate Cloud skills. Though I've kind of made it a place to also talk about some things I've done on the side.
+    You can find the original list of tasks <a href="https://cloudresumechallenge.dev/docs/the-challenge/aws/">Here.</a>
+</p>
+
+<h2>What are we using?</h2>
+<p>
+    This site, as listed on the challenge website, is utilising CloudFront, S3, AWS Certificate Manager, Lambda and DynamoDB.
+    All of these are integrated in some form to provide the website itself. You can see the View Counter by inspecting the Home Page, you'll see the number being returned in the console.
+    Javascript is being used in the HTML to perform the GET Request to Lambda, which uses Python to interact with DynamoDB. I originally hosted this site on an EC2 instance, but that would have made
+    things tedious and unnecessary for this project. EC2 would prove some Linux skills and use of other products, but we also wouldn't be utilising the handful of services that AWS can provide, and manage for us.
+
+</p>
+
+<h2>What did I learn?</h2>
+<p>
+    AWS actually made this much easier for me than I could have imagined. I studied for the AWS CCP exam whilst going through the Challenge and applied knowledge once I learnt about the services. 
+    Not only did this help with studying, but applying it to a project really helped the information stick with me. AWS offering a free SSL Certificate was actually pretty amazing and made perfect sense.
+    Adding my own Domain wasn't too bad, but I'd done stuff like that before with WordPress and at workplaces. I've seen a bit of hate around AWS, but I think it's great compared to Azure, especially for a project like this.
+    CloudFront gives you so much functionality over the S3 buckets, and the additional options for monitoring can be so useful. I can only imagine how useful this is in a developer environment. 
+    S3 buckets were tedious at first, but after understanding it and how they worked, it made a lot more sense. I enjoyed making the bucket policies and utilising the JSON section for the permissions. 
+    It just seems like a more sensible approach than tick boxes and all the usual GUI nonsense. AWS Certificate made things much easier, though I had trouble applying the License to the domain. 
+    I ended up going through about four total certificates because I created them wrong, applied them wrong or just couldn't get them verified. Mostly because of a few misunderstandings and how it applied.
+    Lambda is a fantastic solution for any IT system, and I love how many languages it can support. Using Python to interact with DynamoDB was such a joy to see in action. This is probably one of my most favourite
+    tech solutions to date. DynamoDB also seemed nice and clean to use, especially being hosted by AWS themselves and being able to explore items within the portal itself. This made the ViewCount section much easier.
+</p>
+<body>
+<br>
+<br>
+<hr>

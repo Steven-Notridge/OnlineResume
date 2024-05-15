@@ -1,0 +1,31 @@
+<!-- <script>
+const http = new XMLHttpRequest()
+
+http.open("GET", "https://api.notridge.uk/ViewCount")
+http.send()
+
+http.onload = () => document.getElementById(http.responseText).innerHTML;
+
+document.write(http.responseText)
+document.getElementById("demo").innerHTML = http.responseText();
+
+</script> -->
+<!-- <script>
+fetch('https://api.notridge.uk/ViewCount')
+  .then(function(response) {
+    return response.json();
+//   })
+//   .then(function(myJson) {
+//     console.log(JSON.stringify(myJson));
+  });
+</script> -->
+
+<p id="response"></p> 
+<!-- <script>
+      let response = fetch("https://api.notridge.uk/ViewCount")
+        .then((response) => response.json())
+        .then((response) => {
+          console.log(response.events[0].title);
+          return response;
+        })
+</script> -->

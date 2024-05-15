@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="./index_files/styles.css" type="text/css">
+<body class="dark sans-serif loaded" style="--font-size: 26px; --content-width: 60em;">
+<div class="container" style="--line-height: 1.8em;" dir="ltr">
+<title>Noodles Project</title> 
+
+<div class="menu">
+    <a href="./">Home</a>
+    <a href="./SideProjects">Side Projects</a>
+    <a href="./CloudResume">Cloud Resume Challenge</a>
+    <a href="https://www.linkedin.com/in/steven-notridge-339891192/">LinkedIn</a>
+    <a href="https://github.com/Steven-Notridge">GitHub</a>
+    <a href="mailto:steven.notridge@live.com">Contact</a>
+</div> 
+
+<br>
+<br>
+<hr>
+
+<h1> Steven Notridge </h1>
+
+<hr>
+
+<h2> Noodles! </h2>
+<p> What... you've never had Instant Noodles before? Guess you came to the right place then. I'd visited a Chinese warehouse food supplier called Wing Yip. 
+    It's a big store near me, that sell quite a lot of general asian foods like a box of 60 duck spring rolls. After walking around for a bit, there was a large section of literally, 
+    only Instant Noodles. So I stood back for a bit, and watched as people picked some noodles, adding it to their shopping trolley. I watched for about fifteen minutes, 
+    probably looking somewhat out of place, but eventually got a mental heatmap down and picked out some of them for myself. After trying around four of them, I was damn surprised. 
+    They were really good! I also went to Sainsbury's and found the 'world foods' section had some Instant Noodles too, and after trying those I didn't think they were too great. 
+    So, I decided, I'm going to buy them all and review them. Why? I dunno. But then I also realised, if I do this, I can incorporate some form of DevOps into this too! 
+    So I started mapping out the project, making it as complex as I could for the challenge. 
+</p>
+
+<h2> The Results! </h2>
+<p> I'm currently planning out and messing with the idea of a WebApp. If you want to see the data, you can find it <a href="https://github.com/Steven-Notridge/NoodlesProject">here</a>.
+    
+</p>
+
+<h2> The Tech used! </h2>
+<p>
+    After testing each packet, I recorded the information into a Google Sheet. This allowed me to save as a .csv and use it in other situations. Currently, I've created a Python script which you can find on the link above or on my GitHub.
+    If you run this locally, providing you know how to do so, you'll be able to go through the data in an app format. I'm planning to make a local GUI version and to make it an actual App, maybe adding to it in the future with more data.
+    Aside from the local version, and as mentioned already, I'm planning to create a WebApp version. I've already imported the data from the .csv into DynamoDB which is hosted on AWS, by using their NoSQL Workbench tool. 
+    I'll need to create the javascript to use a FETCH request to the API Gateway, triggering a Lambda function, which then retrieves the data from the DyanmoDB. So far, everything else is in motion, I'm just not that experienced with HTML/JS so I'm having trouble figuring out the FETCH request.
+</p>

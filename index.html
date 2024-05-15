@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./index_files/styles.css" type="text/css">
+<body class="dark sans-serif loaded" style="--font-size: 26px; --content-width: 60em;">
+<div class="container" style="--line-height: 1.8em;" dir="ltr">
+<title>Steven Notridge's Cloud Resume!</title> 
+
+<div class="menu">
+    <a href="./SideProjects">Side Projects</a>
+    <a href="./CloudResume">Cloud Resume Challenge</a>
+    <a href="./noodles">Noodles!</a>
+    <a href="https://www.linkedin.com/in/steven-notridge-339891192/">LinkedIn</a>
+    <a href="https://github.com/Steven-Notridge">GitHub</a>
+    <a href="mailto:steven.notridge@live.com">Contact</a>
+</div> 
+<body>
+<br>
+<br>
+<hr>
+
+<p id="displayCount"></p>
+<script>
+    var message = null;
+    var xmlhttp = new XMLHttpRequest(); 
+    var url = "https://api.notridge.uk/ViewCount";
+    xmlhttp.open("GET", url, true);
+    xmlhttp.responseType = 'Text'
+    xmlhttp.onload = (res) => {
+        console.log(xmlhttp.responseText);
+        document.getElementById("displayCount").innerHtml = xmlhttp.response;
+    };
+    xmlhttp.send();
+    xmlhttp.send(body);
+    document.getElementById("displayCount").innerHtml = xmlhttp.response;
+    document.getElementById("displayCount").innerHtml = xmlhttp.responseText;
+</script>
+
+<h1> Steven Notridge </h1>
+
+<div class="fade-in">
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> <img src="./index_files/selfie2.png" style="float:right;width:240px;height:240px"></a>
+</div>
+
+<hr>
+
+<h2>Personal Summary</h2> 
+<p>
+    After being involved with the Cloud for 8 years, I've been able to build a great set of skills within IT. 
+    I have a personal love for scripting, automating anything possible to save time, and focus on more difficult tasks. 
+    I'm set on getting into the DevOps culture, as this combines my love for Infrastructure and Cloud, as well as scripting and automation. 
+    You can see my work experience below, or navigate to some more DevOps/Developer related stuff at the top.</a>
+</p>
+
+<hr>
+<br>
+
+<h3>Certificates</h3>
+<br>
+<!-- <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8cfb354f-fad0-4bcd-971c-035a87fda699" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="cdn.credly.com/assets/utilities/embed.js"></script> -->
+<a href="https://www.credly.com/badges/8cfb354f-fad0-4bcd-971c-035a87fda699/public_url"> <img src="./index_files/ccp.png" style="float:left"></a>
+
+<br>
+<br>
+<br>
+<hr>
+
+
+<h3>YMCA England &amp; Wales - Systems Engineer</h3>
+<h4>July 2020 - April 2022</h4>
+<p>
+    Managing and supporting the users in the office, working remotely and
+    located in shops across the UK. I also onboard new users with devices and
+    provide a small session introducing them to our environment. I have
+    created scripts to automate tasks, giving the team more time to focus on
+    other tickets. I also maintained the infrastructure, ensuring systems were
+    up to date and created tools to monitor network connectivity. 
+    I created a plan to implement a Docker environment for the Developers to test their queries in. But this fell apart, as a migration into AWS was happening at the same time.
+    I also performed some VM Migrations, upgrading an AD Server from 2012 to 2019 and also drafted plans to migrate into O365.
+
+</p>
+
+<h3>DMG Media - Support Analyst</h3>
+<h4>November 2019 - April 2020</h4>
+<p>
+    As a Contractor at Daily Mail, I was providing support for users 
+with bespoke software, and managing the accounts. I also offered 
+assistance with Group Policy and PowerShell to teams outside of my own, 
+in order to improve the tools that were used within IT. 
+</p>
+
+<h3>Node4 - Cloud Support Engineer</h3>
+<h4>July 2018 - November 2019</h4>
+<p>
+    As a Cloud Engineer, I supported platforms that were hosted on 
+Azure, AWS and the company's internal Cloud platform. I worked as an 
+escalation point for 1st line Support Engineers, if they were unable to 
+resolve issues quickly. The main remote solution used here was Citrix, 
+often performing general maintenance and responding to Alerts. 
+I started to utilise PowerShell to automate tasks here, for Alerts, User Account creation, Password Expiry, Disk Space Cleanups, Clearing unused remote sessions and more...
+</p>
+
+<h3>Matsco Solutions - Support Analyst</h3>
+<h4>October 2016 - July 2018</h4>
+<p>
+    Working towards maintaining a professional service for a 24/7 
+helpdesk that operates mostly between the USA, Hong Kong and the UK. 
+This involved handing over work, diverting phones and following up on 
+anything left from the previous day to other teams in the listed 
+regions. Providing effective support to financial clients was a key part
+ of this role, as well as good communication between teams within the 
+company for further assistance if required. I also assisted with migrating VM's between hosts, patching servers, and creating scripts for clients to further help automating tasks.
+</p>
+
+<h3>WorkPlaceLive - Migrations Engineer</h3>
+<h4>October 2014 - October 2016</h4>
+<p>
+    I was responsible for onboarding new customers, and providing them 
+assistance with changing from an on-prem infrastructure and migrating 
+them into the company's cloud solution. I was part of migrating E-Mails,
+ Files and ensuring permissions were kept across systems. We strictly used VMWare to host Citrix and RDP Farms. 
+</p>
+
+</body>
+</html>
